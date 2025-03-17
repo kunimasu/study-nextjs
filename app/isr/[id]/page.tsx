@@ -45,6 +45,8 @@ export default async function IsrPage({
 }) {
   const { id } = await params;
 
+  console.log("IsrPage!!!")
+
   // Fetch the specific blog post data based on the provided ID.
   const post: Post = await fetch(`https://api.vercel.app/blog/${id}`).then((res) => res.json());
   return (
