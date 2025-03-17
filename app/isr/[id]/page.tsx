@@ -9,7 +9,7 @@ interface Post {
 // Revalidate static pages every 60 seconds to ensure fresh data.
 export const revalidate = 60;
 
-export const dynamicParams = !true;
+export const dynamicParams = false;
 
 // Generate the list of static paths based on the blog posts fetched from the API.
 export async function generateStaticParams() {
