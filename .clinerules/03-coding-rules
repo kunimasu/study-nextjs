@@ -1,0 +1,13 @@
+# Coding Rules
+
+Describe rules to be followed in coding.
+
+1. Indentation is four spaces.
+2. Documentation in classes, functions, and files
+    - Describe as much as possible, including arguments, returns, possible exceptions, etc.
+3. Create unit tests for functions and tests.
+4. For naming, emphasis should be placed on clarity, and some lengthening of the name is acceptable.
+    - For instance:
+        - For user information
+            - info (not good)
+            - userInfo (great)

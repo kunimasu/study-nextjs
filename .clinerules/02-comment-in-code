@@ -1,0 +1,6 @@
+# Comment In Code
+Write comment in program code according to these rules.
+
+1. Basically a comment at the top of the program code.
+2. If a comment indicating a portion of the program code is to be written, it is permitted to be written at the end of the line.
+3. Comments should describe the reason(s), indicating why the implementation was chosen.
