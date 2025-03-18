@@ -1,35 +1,25 @@
-import { NextPage } from 'next'
-
 export async function generateStaticParams() {
- // サンプルデータを返す (実際はAPIなどからデータを取得)
+  // Sample data to return (in practice, this would be fetched from an API)
  const items = [
-  { id: 1, title: 'First Item' },
-  { id: 2, title: 'Second Item' },
-  { id: 3, title: 'Third Item' }
- ]
-
+  { id: "1" },
+  { id: "2" },
+  { id: "3" }
+  ];
  return items.map(item => ({
-  params: {
-   id: item.id.toString()
-  }
- }))
+    id: item.id
+  }));
 }
 
 interface PageProps {
- params: {
-  id: string
-  title: string
- }
+  params: Promise<{
+    id: string;
+  }>
 }
 
 export const dynamicParams = false;
 
-const SSGPage: NextPage<PageProps> = ({ params }) => {
- return (
-  <div>
-   <h1>ID: {params.id}</h1>
-  </div>
- )
-}
-
-export default SSGPage
+const SSGPage = async ({ params }: PageProps) => {
+  const { id } = await params;
+  return (<h1>ID: {id}</h1>);
+};
+export default SSGPage;
